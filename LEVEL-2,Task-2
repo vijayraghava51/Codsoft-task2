@@ -1,0 +1,314 @@
+A job board is essentially an online marketplace that connects employers with potential employees.
+Here's a quick rundown of how it works.
+
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header_menu">
+        <header>
+            <img src="https://res.cloudinary.com/dnrndkg5f/image/upload/v1718639701/logo-removebg-preview_e3mxpm.png">
+            <h1><a class="logo" href="#">Job Board</a></h1>
+            <nav>
+                <ul>
+            
+                    <li><a href="#Home" class="head">Home</a></li>
+                    <li><a href="#Jobs" class="head">Jobs</a></li>
+                    <li><a href="#Companies" class="head">Companies</a></li>
+                    <li><a href="#About Us" class="head">About Us</a></li>
+                    <li><a href="#Contact" class="head">Contact</a></li>
+                    <li><a class="box" href="#Login" class="head">Login</a></li>
+                    <li><a href="#Register" class="head">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <marquee>
+        <h3><img src="https://res.cloudinary.com/dnrndkg5f/image/upload/v1718809383/gdk4msvuymivvj6xgfyq.gif">Hiring Freshers/Experience Jobs</h3>
+    </marquee>
+    <div class="container">
+        <h1>Find Your Dream Job</h1>
+    </div>
+    <br><br>
+    <div class="container_plan">
+        <form action="#" method="get">
+            <input type="text" name="Keywords" placeholder="Keywords">
+            <input type="text" name="Location" placeholder="Location">
+            <input type="text" name="Company" placeholder="Company">
+            <button type="submit">Search</button>
+        </form>
+    </div>       
+    <section>
+        <h2>Latest Job Listings</h2>
+        <div class="left">
+            <ul> 
+                <li> 
+                    <h3>Web Developer</h3> 
+                    <p>Company:  ABC company</p> 
+                    <p>Location: India</p> 
+                    <p>Description: Good Frontend Developer</p> 
+                    <a class="Apply Now">Apply Now</a> 
+                </li>  
+            </ul> 
+        </div>
+        <div class="middle">
+            <ul> 
+                
+                <li> 
+                    <h3>Softwear Developer</h3>
+                    <p>Company:  FGH company</p> 
+                    <p>Location: India</p> 
+                    <p>Description: Good Backend Developer</p> 
+                    <a class="Apply Now">Apply Now</a> 
+                </li>  
+            </ul> 
+        </div>
+        <div class="right">
+            <ul>  
+                <li>
+                    <h3>Java full Stack Developer</h3>
+                    <p>Company:  XYZ company</p> 
+                    <p>Location: India</p> 
+                    <p>Description: Good Full Stack Developer</p> 
+                    <a class="Apply Now">Apply Now</a> 
+                </li>
+            </ul>
+        </div>
+    </section> 
+
+      
+
+    <footer> 
+
+        <p>© 2024 Job Search Portal</p> 
+
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+CSS:
+:root{
+    --bg-color:#322653;
+    --btn-color:#EA1179;
+    --box-shadow:0px 0px 5px var(--btn-color);
+    --color:#fff;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'ubuntu', sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+header img{
+    height: 140px;
+}
+header h1{
+    margin-left: -290px;
+}
+.header_menu{
+    box-shadow: 0px 15px 10px -15px var(--btn-color);
+}
+.logo{
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul a{
+    color: var(--color);
+    text-decoration: none;
+    transition: all .8s;
+}
+nav ul a:hover{
+    color: yellow;
+}
+marquee{
+    align-items: center;
+    margin-top: 10px;
+    color: #1908fc;
+    background-color: rgb(53, 208, 10);
+}
+.container{
+    color: #fff;
+    text-align: center;
+}
+.box{
+    animation: rotate 2s infinite linear;
+    width: 100%;
+    z-index: 1;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 018s ease;
+}
+.container_plan{
+    text-align: center;
+    margin-top: 2rem;
+}
+.container_plan form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_plan input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.container_plan button{
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.container_plan button:hover{
+    background-color: #ff3300;
+}
+h2 {
+    color: white; 
+    font-size: 24px; 
+    margin-bottom: 1rem; 
+    text-align: center; 
+}   
+.left ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 50%;
+    align-items: center;
+    background-color: var(--bg-color);
+    list-style: none; 
+} 
+.left ul h3{
+    color: yellow;
+}
+.left ul p{
+    color: #fff;
+}
+.left ul a{
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}  
+.left ul a:hover{
+    background-color: #ff3300;
+}
+.middle ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 590px;
+    margin-top: -200px;
+    width: 50%;
+    align-items: center;
+    background-color: var(--bg-color);
+    list-style: none; 
+} 
+.middle ul a{
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+} 
+.middle ul h3{
+    color: yellow;
+} 
+.middle ul a:hover{
+    background-color: #ff3300;
+}
+.middle ul{
+    color: #fff;
+}
+
+.right ul { 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1000px;
+    margin-top: -200px;
+    background-color: var(--bg-color);
+    width: 50%; 
+    margin-bottom: 20px;
+    list-style: none;
+    gap: 10px; 
+}   
+.right ul a{ 
+    background-color: #ff6600; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.8s; 
+}
+.right ul h3{
+    color: yellow;
+}
+.right ul a:hover { 
+    background-color: #ff3300;
+}
+.right ul p{
+    color: #fff;
+}
+footer {
+    text-align: center; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 1rem 0;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(purple\Illustrated\mountain\Desktop\Wallpaper.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
